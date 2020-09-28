@@ -35,5 +35,14 @@ public class AddressBook {
 		 else
 			 return "Contact Updated";
 	 }
+	public boolean removeContact(String firstname, String lastname) {
+		 Contact s=new Contact("","","", "", "", 0,"", "");
+		 for(Contact x:addressBook) {
+			 if(x.firstname.equalsIgnoreCase(firstname) && x.lastname.equalsIgnoreCase(lastname)) {
+				 s=x;
+			 }
+		 }
+		 return addressBook.remove(s);
+	 }
 
 }
