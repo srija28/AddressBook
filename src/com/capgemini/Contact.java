@@ -21,5 +21,9 @@ public class Contact {
 		this.phonenumber = phonenumber;
 		this.email = email;
 	}
+	@Override
+	public String toString() {
+		return "First Name: "+firstname+"\nLast Name: "+lastname+"\nAddress: "+address+"\nCity: "+city+"\nState: "+state+"\nZip: "+zip+"\nPhone Number: "+phonenumber+"\nEmail: "+email;
+	}
 
 }

@@ -17,5 +17,8 @@ public class AddressBook {
 	public void addContact(Contact contactObj) {
 		addressBook.add(contactObj);
 	}
+	public List<Contact> viewContacts() {
+		 return addressBook;
+	}
 
 }
