@@ -23,17 +23,24 @@ public class AddressBook {
 	}
 	public String updateContact(Contact s) {
 		 int i=0;
-		 for(Contact c: addressBook) {
-			 if(c.firstname.equalsIgnoreCase(s.firstname) && c.lastname.equalsIgnoreCase(s.lastname)) {
-			 addressBook.remove(c);
-			 addressBook.add(s);
+		 Contact m = new Contact("", "", "", "", "", 0, "", "");
+		 Contact n = new Contact("", "", "", "", "", 0, "", "");
+		
+		 for(Contact x: addressBook) {
+			 if(x.firstname.equalsIgnoreCase(s.firstname) && x.lastname.equalsIgnoreCase(s.lastname)) {
+				 n=x;
+			 m=s;
 			 i++;
 			 }
 		 }
 		 if(i==0)
 			 return "No contact found with this name";
-		 else
+		 else {
+			 addressBook.remove(n);
+			 addressBook.add(m);
 			 return "Contact Updated";
+		 }
+			
 	 }
 	public boolean removeContact(String firstname, String lastname) {
 		 Contact s=new Contact("","","", "", "", 0,"", "");
