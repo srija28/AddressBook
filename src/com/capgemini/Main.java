@@ -28,6 +28,7 @@ public class Main {
 			String email = sc.nextLine();
 			Contact c = new Contact(first, last, add, city, st, zip, ph, email);
 			a.addContact(c);
+			
 		}
 
 	}
